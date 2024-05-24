@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+    <title>Riya</title>
+    <link rel="icon" href="favicon.ico">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        nav {
+            display: flex;
+            flex-direction: column;
+            top: 0;
+            position: sticky;
+            background-color: white;
+            border-top: 2px solid rgb(214, 214, 214);
+            border-bottom:2px solid rgb(214, 214, 214) ;
+        }
+        .announcement-bar-text {
+            width: 100%;
+            height: 50px;
+            background-color: yellow;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: large;
+        }
+        .announcement-bar-quiz {
+            width: 100%;
+            height: 50px;
+            background-color: rgb(249, 249, 245);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: large;
+        }
+        .navbar-container {
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        .navbar-logo {
+            padding: 7px;
+        }
+        .logo {
+            width: 150px;
+            height: 70px;
+        }
+        input {
+            border: solid 1px rgb(202, 202, 202);
+            width: 500px;
+            height: 50px;
+            font-size: large;
+            padding: 3px;
+        }
+        .navbar-search {
+            display: flex;
+            align-items: center;
+            background-color: red;
+            box-shadow: -5px 5px 2px rgb(24, 24, 24, 0.2);
+        }
+        .search-icon {
+            width: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+        .navbar-info {
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-direction: row;
+            gap: 25px;
+            font-size: large;
+        }
+        i {
+            font-size: large;
+            padding: 2px;
+        }
+        .navbar-category {
+            display: flex;
+            gap: 30px;
+            padding: 20px;
+        }
+        a {
+            text-decoration: none;
+            color: black;
+            font-size: large;
+        }
+        footer{
+            background-color: rgba(234, 232, 232, 0.5);
+            height: 300px;
+            display: flex;
+            align-items: baseline;
+            justify-content: space-evenly;
+            padding-top: 20px;
+        }
+        li{
+            list-style-type: none;
+            margin-top: 5px;
+        }
+        .content{
+            width: 100%;
+            height: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            margin-top: 30px;
+        }
+        p{
+            font-size: large;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="announcement-bar-text">Free shipping for orders over Rs. 150.00!</div>
+    <div class="announcement-bar-quiz">“Fill in the Quiz to Avail a FREEGIFT of worth Rs. 300!”</div>
+    <nav>
+        <div class="navbar-container">
+            <div class="navbar-logo"><a href="index.html"><img src="riya.png" class="logo"></a></div>
+            <div class="navbar-search">
+                <input type="text" placeholder="What are you looking for?">
+                <span class="search-icon"><i class="fa fa-search" aria-hidden="true"></i></span>
+            </div>
+            <div class="navbar-info">
+                <section><a href="trackorder.html"><i class="fa fa-truck" aria-hidden="true"></i><span>Track Order</span></a></section>
+                <section><a href="login.html"><i class="fa fa-user" aria-hidden="true"></i><span>Login</span></a></section>
+                <section><a href="cart.html"><i class="fa fa-cart-arrow-down" aria-hidden="true"></i></a></section>
+            </div>
+        </div>
+        <div class="navbar-category">
+            <a href="skincare.html"><b>Skin care</b></a>
+            <a href="foodbeverage.html"><b>Food & Beverage</b></a>
+        </div>
+    </nav>
+    <div class="content">
+     <center><h1 style="margin: 10px;">About Us</h1></center>
+    <div style="width: 500px;height:auto;text-align: justify; margin: 10px;"><p>Azista Store is an e-Commerce platform run by its parent company Azista Industries Pvt Ltd.
+          We are across the three verticals Food Technology, Health & Wellness, and Aerospace.</p>
+          <br><br>
+         <p>We feature a wide range of products worldwide. Our trend of products can make a positive 
+          impact on people's lives. We innovate to complement our customers' needs and reinvent the 
+          status quo, solve complex problems, and create value for our clients. Our pack of teams is 
+          constantly testing new ways to satisfy our clients and customers as it is our priority and 
+          we aim to establish a healthy living and create a massive impact by promoting healthy 
+          eating globally.</p></div>
+    </div>
+    <footer>
+        <section><h3>Follow Us</h3>
+                 <i style="color:blue ;" class="fa-brands fa-facebook"></i>
+                 <i style="color:blue;" class="fa-brands fa-twitter"></i>
+                 <i style="color:rgb(226, 34, 111) ;" class="fa-brands fa-instagram"></i>
+                 <i style="color:red ;" class="fa-brands fa-youtube"></i></section>
+        <section><h3>About Store</h3>
+                 <ul style="padding-top: 10px;"><li>About us</li>
+                 <li>Contact us</li></ul></section>
+        <section><h3>Support</h3>
+        <ul style="padding-top: 10px;"><li>Returns & Refunds</li>
+            <li>Safety & Security</li>
+            <li>Shipping</li>
+            <li>Terms & Conditions</li></ul></section>
+        <section><h3>My Store</h3>
+        <ul style="padding-top: 10px;"><li><a href="login.html">My Account</a></li>
+            <li><a href="cart.html">My Cart</a></li></ul></section>
+        <section><h3>Marketed By</h3>
+            <pre style="font-family: 'Times New Roman', Times, serif;">Riya Industries Private Limited
+S.No: 80-84, Melange Towers, 
+Patrika Nagar, Madhapur, 
+500081 Hyderabad Telangana, India
+
+<i class="fa-solid fa-phone"></i>-1800 102 0576
+
+<i class="fa-solid fa-envelope"></i>-abecommerce@azistaindustries.com</pre></section>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+    <title>Riya</title>
+    <link rel="icon" href="favicon.ico">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        nav {
+            display: flex;
+            flex-direction: column;
+            top: 0;
+            position: sticky;
+            background-color: white;
+            border-top: 2px solid rgb(214, 214, 214);
+            border-bottom: 2px solid rgb(214, 214, 214);
+            z-index: 1;
+        }
+        .announcement-bar-text,
+        .announcement-bar-quiz {
+            width: 100%;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: large;
+        }
+        .announcement-bar-text {
+            background-color: yellow;
+        }
+        .announcement-bar-quiz {
+            background-color: rgb(249, 249, 245);
+        }
+        .navbar-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px;
+        }
+        .navbar-logo {
+            padding: 7px;
+        }
+        .logo {
+            width: 150px;
+            height: 70px;
+        }
+        .navbar-search {
+            display: flex;
+            align-items: center;
+            background-color: red;
+            box-shadow: -5px 5px 2px rgba(24, 24, 24, 0.2);
+        }
+        .navbar-search input {
+            border: solid 1px rgb(202, 202, 202);
+            width: 500px;
+            height: 50px;
+            font-size: large;
+            padding: 3px;
+        }
+        .search-icon {
+            width: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+        .navbar-info {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+            font-size: large;
+        }
+        .navbar-info i {
+            font-size: large;
+            padding: 2px;
+        }
+        .navbar-category {
+            display: flex;
+            gap: 30px;
+            padding: 20px;
+        }
+        a {
+            text-decoration: none;
+            color: black;
+            font-size: large;
+        }
+        footer {
+            background-color: rgba(234, 232, 232, 0.5);
+            height: 300px;
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-evenly;
+            padding-top: 20px;
+        }
+        footer section h3 {
+            margin-bottom: 10px;
+        }
+        footer ul {
+            padding-top: 10px;
+        }
+        footer ul li {
+            list-style-type: none;
+            margin-top: 5px;
+        }
+        .form-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            min-height: calc(100vh - 70px); /* Adjusted to account for header/footer height */
+        }
+        .form-container form {
+            width: 100%;
+            max-width: 600px;
+            border: 1px solid #ccc;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: #f9f9f9;
+        }
+        .form-container form h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+        }
+        .form-field {
+            margin-bottom: 15px;
+        }
+        .form-field input {
+            width: 100%;
+            padding: 10px;
+            font-size: 1em;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .form-action-row {
+            margin-top: 20px;
+            text-align: center; /* Center align submit button */
+        }
+        .form-action--submit {
+            padding: 10px 20px;
+            font-size: 1em;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .form-action-row--helper {
+            margin-top: 10px;
+            font-size: 0.9em;
+            text-align: center; /* Center align helper text */
+        }
+        .form-action-row--helper-item {
+            margin-right: 15px;
+        }
+        .d-flex {
+            display: flex;
+        }
+        .align-items-center {
+            align-items: center;
+        }
+        .my-3 {
+            margin: 15px 0;
+        }
+        .py-2 {
+            padding: 10px 0;
+        }
+        .col-md-6 {
+            width: 100%; /* Adjusted for form layout */
+        }
+        .btn {
+            display: inline-block;
+            font-weight: 400;
+            text-align: center;
+            white-space: nowrap;
+            vertical-align: middle;
+            user-select: none;
+            border: 1px solid transparent;
+            padding: 0.375rem 0.75rem;
+            font-size: 1rem;
+            line-height: 1.5;
+            border-radius: 0.25rem;
+            transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+        }
+        .btn-primary {
+            color: #fff;
+            background-color: #007bff;
+            border-color: #007bff;
+        }
+        .px-4 {
+            padding-left: 1.5rem;
+            padding-right: 1.5rem;
+        }
+        .form-control {
+            display: block;
+            width: 100%;
+            height: calc(1.5em + 0.75rem + 2px);
+            padding: 0.375rem 0.75rem;
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 1.5;
+            color: #495057;
+            background-color: #fff;
+            background-clip: padding-box;
+            border: 1px solid #ced4da;
+            border-radius: 0.25rem;
+            transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+        }
+        .radio-group {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        .radio {
+            margin-right: 20px;
+            position: relative;
+            padding-left: 25px;
+        }
+        .radio input {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+        }
+        .radio .checkmark {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 20px;
+            width: 20px;
+            background-color: #eee;
+            border-radius: 50%;
+        }
+        .radio:hover input ~ .checkmark {
+            background-color: #ccc;
+        }
+        .radio input:checked ~ .checkmark {
+            background-color: #007bff;
+        }
+        .checkmark:after {
+            content: "";
+            position: absolute;
+            display: none;
+        }
+        .radio input:checked ~ .checkmark:after {
+            display: block;
+        }
+        .radio .checkmark:after {
+            top: 6px;
+            left: 6px;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="announcement-bar-text">Free shipping for orders over Rs. 150.00!</div>
+    <div class="announcement-bar-quiz">“Fill in the Quiz to Avail a FREEGIFT of worth Rs. 300!”</div>
+    <nav>
+        <div class="navbar-container">
+            <div class="navbar-logo">
+                <a href="index.html">
+                    <img src="riya.png" class="logo" alt="Riya Logo">
+                </a>
+            </div>
+            <div class="navbar-search">
+                <input type="text" placeholder="What are you looking for?">
+                <span class="search-icon"><i class="fa fa-search" aria-hidden="true"></i></span>
+            </div>
+            <div class="navbar-info">
+                <section>
+                    <a href="trackorder.html">
+                        <i class="fa fa-truck" aria-hidden="true"></i>
+                        <span>Track Order</span>
+                    </a>
+                </section>
+                <section>
+                    <a href="login.html">
+                        <i class="fa fa-user" aria-hidden="true"></i>
+                        <span>Login</span>
+                    </a>
+                </section>
+                <section>
+                    <a href="cart.html">
+                        <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
+                    </a>
+                </section>
+            </div>
+        </div>
+        <div class="navbar-category">
+            <a href="skincare.html"><b>Skin care</b></a>
+            <a href="foodbeverage.html"><b>Food & Beverage</b></a>
+        </div>
+    </nav>
+    <div class="form-container">
+        <form id="track_form" method="post">
+            <h2>Track Your Order</h2>
+            <div class="radio-group">
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="track_type" value="order_id" checked>
+                        <span class="checkmark"></span>
+                        <span><strong>Order ID</strong></span>
+                    </label>
+                </div>
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="track_type" value="awb">
+                        <span class="checkmark"></span>
+                        <span><strong>AWB</strong></span>
+                    </label>
+                </div>
+            </div>
+            <div class="form-field">
+                <input type="text" class="form-control" id="track_id" name="track_id" placeholder="Enter order id to search" required>
+            </div>
+            <div class="form-action-row">
+                <input type="submit" id="submit" name="submit" class="btn btn-primary px-4 form-action--submit" value="Submit">
+            </div>
+            <br>
+        </form>
+    </div>
+    <footer>
+        <section>
+            <h3>Follow Us</h3>
+            <i style="color: blue;" class="fa-brands fa-facebook"></i>
+            <i style="color: blue;" class="fa-brands fa-twitter"></i>
+            <i style="color: rgb(226, 34, 111);" class="fa-brands fa-instagram"></i>
+            <i style="color: red;" class="fa-brands fa-youtube"></i>
+        </section>
+        <section>
+            <h3>About Store</h3>
+            <ul>
+                <li><a href="aboutus.html">About us</a></li>
+                <li>Contact us</li>
+            </ul>
+        </section>
+        <section>
+            <h3>Support</h3>
+            <ul>
+                <li>Returns & Refunds</li>
+                <li>Safety & Security</li>
+                <li>Shipping</li>
+                <li>Terms & Conditions</li>
+            </ul>
+        </section>
+        <section>
+            <h3>My Store</h3>
+            <ul>
+                <li><a href="login.html">My Account</a></li>
+                <li><a href="cart.html">My Cart</a></li>
+            </ul>
+        </section>
+        <section>
+            <h3>Marketed By</h3>
+            <pre style="font-family: 'Times New Roman', Times, serif;">
+Riya Industries Private Limited
+S.No: 80-84, Melange Towers, 
+Patrika Nagar, Madhapur, 
+500081 Hyderabad Telangana, India
+
+<i class="fa-solid fa-phone"></i>-1800 102 0576
+
+<i class="fa-solid fa-envelope"></i>-abecommerce@azistaindustries.com
+            </pre>
+        </section>
+    </footer>
+</body>
+</html>

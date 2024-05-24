@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+    <title>Riya</title>
+    <link rel="icon" href="favicon.ico">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        nav {
+            display: flex;
+            flex-direction: column;
+            top: 0;
+            position: sticky;
+            background-color: white;
+            border-top: 2px solid rgb(214, 214, 214);
+            border-bottom:2px solid rgb(214, 214, 214) ;
+            z-index: 1;
+        }
+        .announcement-bar-text {
+            width: 100%;
+            height: 50px;
+            background-color: yellow;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: large;
+        }
+        .announcement-bar-quiz {
+            width: 100%;
+            height: 50px;
+            background-color: rgb(249, 249, 245);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: large;
+        }
+        .navbar-container {
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        .navbar-logo {
+            padding: 7px;
+        }
+        .logo {
+            width: 150px;
+            height: 70px;
+        }
+        input {
+            border: solid 1px rgb(202, 202, 202);
+            width: 500px;
+            height: 50px;
+            font-size: large;
+            padding: 3px;
+        }
+        .navbar-search {
+            display: flex;
+            align-items: center;
+            background-color: red;
+            box-shadow: -5px 5px 2px rgb(24, 24, 24, 0.2);
+        }
+        .search-icon {
+            width: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+        .navbar-info {
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-direction: row;
+            gap: 25px;
+            font-size: large;
+        }
+        i {
+            font-size: large;
+            padding: 2px;
+        }
+        .navbar-category {
+            display: flex;
+            gap: 30px;
+            padding: 20px;
+            
+        }
+        a {
+            text-decoration: none;
+            color: black;
+            font-size: large;
+        }
+        .slideshow-container {
+            max-width: 100%;
+            margin: 10px;
+        }
+        .mySlides {
+            display: none;
+        }
+        .slide-image {
+            width: 100%;
+            height: 400px;
+        }
+        .features{
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            width: 100%;
+            padding: 5px;
+            height: 200px;
+        }
+        .features-lists{
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            flex-direction: column;
+        }
+        .icons{
+            width: 100px;
+            height: 100px;
+           font-size:150px;
+        }
+        .relate{
+            width: 100%;
+            margin:15px 0px 5px 0px;
+        }
+        .offers{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            padding: 5px;
+            z-index: 0;
+        }
+        .circles{
+            width: 200px;
+            height: 200px;
+            background-color: blue;
+            clip-path: circle(50% at 50% 50%);
+            background-size: contain;
+            border: solid 2px black;
+        }
+        footer{
+            background-color: rgba(234, 232, 232, 0.5);
+            height: 300px;
+            display: flex;
+            align-items: baseline;
+            justify-content: space-evenly;
+            padding-top: 20px;
+        }
+        li{
+            list-style-type: none;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="announcement-bar-text">Free shipping for orders over Rs. 150.00!</div>
+    <div class="announcement-bar-quiz">“Fill in the Quiz to Avail a FREEGIFT of worth Rs. 300!”</div>
+    <nav>
+        <div class="navbar-container">
+            <div class="navbar-logo"><a href="index.html"><img src="riya.png" class="logo"></a></div>
+            <div class="navbar-search">
+                <input type="text" placeholder="What are you looking for?">
+                <span class="search-icon"><i class="fa fa-search" aria-hidden="true"></i></span>
+            </div>
+            <div class="navbar-info">
+                <section><a href="trackorder.html"><i class="fa fa-truck" aria-hidden="true"></i><span>Track Order</span></a></section>
+                <section><a href="login.html"><i class="fa fa-user" aria-hidden="true"></i><span>Login</span></a></section>
+                <section><a href="cart.html"><i class="fa fa-cart-arrow-down" aria-hidden="true"></i></a></section>
+            </div>
+        </div>
+        <div class="navbar-category">
+            <a href="skincare.html"><b>Skin care</b></a>
+            <a href="foodbeverage.html"><b>Food & Beverage</b></a>
+        </div>
+    </nav>
+    <div class="slideshow-container">
+        <div class="mySlides">
+            <img class="slide-image" src="item1.jpg" alt="Slide 1">
+        </div>
+        <div class="mySlides">
+            <img class="slide-image" src="item2.png" alt="Slide 2">
+        </div>
+        <div class="mySlides">
+            <img class="slide-image" src="item3.jpg" alt="Slide 3">
+        </div>
+        <div class="mySlides">
+            <img class="slide-image" src="item4.jpg" alt="Slide 4">
+        </div>
+    </div>
+    <div class="features">
+        <section class="features-lists"><i class="fa fa-truck" aria-hidden="true" style="font-size: 40px;color: rgb(103, 197, 252);"></i>
+                                        <h3>FREE SHIPPING</h3>
+                                        <span>on all orders</span></section>
+        <section class="features-lists"><i class="fa fa-trophy" aria-hidden="true" style="font-size: 40px;color: rgb(103, 197, 252);"></i>
+                                        <h3>Global Quality</h3>
+                                    <span>Made in India</span></section>
+        <section class="features-lists"><i class="fa fa-inr" aria-hidden="true" style="font-size: 40px;color: rgb(103, 197, 252);"></i>
+                                        <h3>COD Available</h3>
+                                        <span>Order now,Pay on delivery</span></section>
+        <section class="features-lists"><i class="fa fa-cube" aria-hidden="true" style="font-size: 40px;color: rgb(103, 197, 252);"></i>
+                                        <h3>Try & Buy</h3>
+                                        <span>Click, Try and Buy</span></section>
+    </div>
+    <div><img src="skin.jpg" class="relate"></div>
+    <div><img src="food.jpg" class="relate"></div>
+    <center><h1>EveryThing on Offer</h1></center>
+    <div class="offers">
+      <div><div class="circles" style="background-image: url(item1.jpg);"></div><span style="font-size: larger;"><center>Lipsticks</center></span></div>
+      <div><div class="circles" style="background-image: url(item3.jpg);"></div><span style="font-size: larger;"><center>Foundations</center></span></div>
+      <div><div class="circles" style="background-image: url(item2.png);"></div><span style="font-size: larger;"><center>Snacks</center></span></div>
+      <div><div class="circles" style="background-image: url(item4.jpg);"></div><span style="font-size: larger;"><center>Ice creams</center></span></div>
+    </div>
+    <p style="text-align:center;padding: 5px;margin: 5px;"><center><h1>Online Shopping Store for Health Care and Wellness Products</h1></center>
+       <pre style="font-family: cursive;padding: 5px;margin: 5px;">   Riya Store features a humongous array of health products under one roof. We offer you natural, fast, and affordable health products that keep you active 
+all day long. We are dedicated to delivering high-quality products at fair prices to our customers' doorstep while emphasizing the importance of a healthy lifestyle.
+        
+        Riyastore offers a comprehensive Online Shopping experience for naturally made Health Care Products that improve your health, nourish your skin with our 
+              Skin Care Products, support you during the crisis situations, maintain your intimate hygiene with Sexual Wellness Products.</pre></p>
+    <footer>
+        <section><h3>Follow Us</h3>
+                 <i style="color:blue ;" class="fa-brands fa-facebook"></i>
+                 <i style="color:blue;" class="fa-brands fa-twitter"></i>
+                 <i style="color:rgb(226, 34, 111) ;" class="fa-brands fa-instagram"></i>
+                 <i style="color:red ;" class="fa-brands fa-youtube"></i></section>
+        <section><h3>About Store</h3>
+                 <ul style="padding-top: 10px;"><li><a href="aboutus.html">About us</a></li>
+                 <li>Contact us</li></ul></section>
+        <section><h3>Support</h3>
+        <ul style="padding-top: 10px;"><li>Returns & Refunds</li>
+            <li>Safety & Security</li>
+            <li>Shipping</li>
+            <li>Terms & Conditions</li></ul></section>
+        <section><h3>My Store</h3>
+            <ul style="padding-top: 10px;"><li><a href="login.html">My Account</a></li>
+                <li><a href="cart.html">My Cart</a></li></ul></section>
+        <section><h3>Marketed By</h3>
+            <pre style="font-family: 'Times New Roman', Times, serif;">Riya Industries Private Limited
+S.No: 80-84, Melange Towers, 
+Patrika Nagar, Madhapur, 
+500081 Hyderabad Telangana, India
+
+<i class="fa-solid fa-phone"></i>-1800 102 0576
+
+<i class="fa-solid fa-envelope"></i>-abecommerce@azistaindustries.com</pre></section>
+    </footer>
+    <script>
+        let slideIndex = 0;
+        function showSlides() {
+            const slides = document.getElementsByClassName("mySlides");
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) { slideIndex = 1; }
+            slides[slideIndex - 1].style.display = "block";
+            setTimeout(showSlides, 5000)
+        }
+
+        document.addEventListener("DOMContentLoaded", (event) => {
+            showSlides();
+            
+        });
+    </script>
+</body>
+</html>
